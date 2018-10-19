@@ -10,5 +10,19 @@ $(function() {
     let html = Mustache.to_html(template, data);
 
     $('#carousel').html(html);
+
+    // Use the jquery cycle to rotate the images to create a carousel
+    // check http://jquery.malsup.com/cycle/browser.html for more info and http://jquery.malsup.com/cycle/options.html for different options
+
+    //get the carousel element and load the jquery cycle function
+    // the cycle function will take an object as a parameter
+    $('#carousel').cycle({
+      fx: 'fade',
+      pause: 1,
+      next: '#next_btn',
+      prev: '#prev_btn',
+      speed: 500,
+      timeout: 1000
+    });
   }); //get JSON
 }); //function
