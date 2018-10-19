@@ -13,7 +13,18 @@
         <div id="carousel"></div>
     </div>
 
-
+    <!-- Template we will use to display the data -->
+    <!-- using {{}} as placeholders to target different json elements in your files -->
+    <script id="catstemplate" type="text/Template">
+        // Create place holder for the names
+        { { #catsObject } }
+        <div class="cats">
+            <img src="{{picture}}" alt="{{alt}}">
+        </div>
+        <h3>{{name}}</h3>
+        <p>{{history}}</p>
+        { { /catsObject}}
+    </script>
 
     <!-- jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
